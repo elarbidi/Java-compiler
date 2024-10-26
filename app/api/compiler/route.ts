@@ -37,10 +37,11 @@ async function runJavaCode(code: string, fileName: string) {
 
         console.log('Execution output:', stdout);
         return { stdout, stderr };
-    } catch (error) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (error : any) {
         console.error('Error during Docker execution:', error);
         await fs.rm(uniqueDir, { recursive: true, force: true });
-        throw new Error(`Execution failed: ${error.stderr || error.message}`);
+        throw new Error(`Execution failed: ${error?.stderr || error.message}`);
     } finally {
         // Clean up the unique directory and its contents
         try {
