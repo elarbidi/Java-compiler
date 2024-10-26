@@ -32,7 +32,7 @@ public class Main {
         setLoading(true);
 
         try {
-            const res = await fetch('http://localhost:3000/api/compiler', {
+            const res = await fetch('http://158.220.124.22/api/compiler', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
