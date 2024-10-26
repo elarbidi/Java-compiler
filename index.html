@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Code Editor</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.editor-container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.file-tabs {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-bottom: 1px solid #ccc;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+.tab span {
+    margin-right: 5px;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+    margin-left: 3px;
+}
+
+.add-file {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #fafafa;
+    border-bottom: 1px solid #ccc;
+}
+
+.action-button {
+    background-color: #3f51b5;
+    color: #fff;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.action-button.run {
+    background-color: #ff5722;
+}
+
+.icon-button.more-options {
+    background-color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.code-editor {
+    padding: 20px;
+    background-color: #2e2e2e;
+    color: #fff;
+    font-family: monospace;
+    font-size: 14px;
+    height: 200px;
+    overflow-y: auto;
+}
+
+.code-editor pre {
+    white-space: pre;
+}
+
+.output {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ccc;
+}
+
+.output pre {
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="editor-container">
+        <!-- File Tab Section -->
+        <div class="file-tabs">
+            <div class="tab">
+                <span>Main.java</span>
+                <button title="Rename" class="icon-button">&#9998;</button>
+                <button title="Delete" class="icon-button">&#10006;</button>
+            </div>
+            <button class="add-file" title="Add New File">+</button>
+        </div>
+
+        <!-- Header with Actions -->
+        <div class="header-actions">
+            <button class="action-button">New</button>
+            <button class="action-button">Java <span class="arrow">&#9662;</span></button>
+            <button class="action-button run">Run &#9654;</button>
+            <button class="icon-button more-options" title="More Options">&#8942;</button>
+        </div>
+
+        <!-- Code Editor Section -->
+        <div class="code-editor">
+            <pre><code>import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}</code></pre>
+        </div>
+
+        <!-- Output Section -->
+        <div class="output">
+            <p>Output:</p>
+            <pre>Click on RUN button to see the output</pre>
+        </div>
+    </div>
+</body>
+</html>

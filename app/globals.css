@@ -25,3 +25,23 @@ body {
     text-wrap: balance;
   }
 }
+/* Light mode styles */
+body {
+  background-color: #f7fafc; /* Light gray background */
+  color: #2d3748; /* Dark gray text */
+}
+
+/* Dark mode styles */
+body.dark {
+  background-color: #1a202c; /* Dark background */
+  color: #cbd5e0; /* Light gray text */
+}
+
+.bg-blue-600 {
+  background-color: #2b6cb0; /* Light blue */
+}
+
+.bg-blue-600.dark {
+  background-color: #2c5282; /* Darker blue for dark mode */
+}
+
